@@ -23,28 +23,30 @@ Sass変数を使っている例はよく見かけますが、CSS変数を使っ�
 - 数字を指定すると、最も直近の数字指定されているところを基準にz-indexが設定される。
 
 ``` scss
-$z-map:(
-  --z-hoge: auto,
-  --z-huga: auto,
-  --z-foo: 500,
-  --z-bar: auto,
-);
-
-:root {
-  $z-map-before-index: -1;
+@mixin z-map($z-map) {
+  $before-index: -1;
 
   @each $name, $value in $z-map {
     $result-z: null;
 
     @if $value == auto {
-      $result-z: $z-map-before-index + 1;
+      $result-z: $before-index + 1;
     } @else {
       $result-z: $value;
     }
 
-    $z-map-before-index: $result-z;
+    $before-index: $result-z;
     #{$name}: $result-z;
   }
+}
+
+:root {
+  @include z-map((
+    --z-hoge: auto,
+    --z-huga: auto,
+    --z-foo: 500,
+    --z-bar: auto,
+  ));
 }
 
 .example {
@@ -62,16 +64,18 @@ $z-map:(
 ### value基準で管理
 
 ```scss
-$z-map-based-value: (
+@mixin z-map($z-map) {
+  @each $name, $value in $z-map {
+    #{$name}: #{$value};
+  }
+}
+
+:root {
+  @include z-map((
   --z-hoge: 0,
   --z-huga: 1,
   --z-foo: 900,
-);
-
-:root {
-  @each $name, $value in $z-map-based-value {
-    #{$name}: #{$value};
-  }
+  ));
 }
 
 .example {
@@ -92,22 +96,24 @@ $z-map-based-value: (
 ## index基準で管理
 
 ```scss
-$z-map-based-index: (
-  --z-hoge,
-  --z-huga,
-  --z-foo,
-);
-
-:root {
-  @each $name in $z-map-based-index {
-    #{$name}: #{index($z-map-based-index, $name)};
+@mixin z-map($z-map) {
+  @each $name in $z-map {
+    #{$name}: #{index($z-map, $name) - 1};
   }
 }
 
+:root {
+  @include z-map((
+    --z-hoge,
+    --z-huga,
+    --z-foo,
+  ));
+}
+
 .example {
-  z-index: var(--z-hoge); // -> z-index: 1;
-  z-index: var(--z-huga); // -> z-index: 2;
-  z-index: var(--z-foo); // -> z-index: 3;
+  z-index: var(--z-hoge); // -> z-index: 0;
+  z-index: var(--z-huga); // -> z-index: 1;
+  z-index: var(--z-foo); // -> z-index: 2;
 }
 ```
 
