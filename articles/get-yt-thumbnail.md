@@ -2,7 +2,7 @@
 title: "【JS】YouTubeの動画IDからなるべく大きい解像度のサムネイルを取得する方法（API使わずに）"
 emoji: "📺"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["javacript", "html", "youtube"]
+topics: ["javascript", "html", "youtube"]
 published: true
 ---
 
