@@ -34,7 +34,8 @@ published: true
 ![](https://storage.googleapis.com/zenn-user-upload/z98vyzz5rhg21mxjmh1q4f5rkmrc)
 *[320x180で動画アップロードした例。maxresdefault.jpgが生成されない。](https://img.youtube.com/vi/eVUGwUOg4Ek/maxresdefault.jpg)*
 
-（今回の場合は何故か、横幅320の画像でアップしたのに640のサムネが生成されていますが、生成条件はよくわかってません。動画によってはsddefaultすら生成されない場合もあります。）
+- ※ 今回の場合は幅320の動画でアップしたのに640のサムネもちゃんと生成されていますが、動画によってはsddefaultとかも生成されない場合もあるので、生成条件はよくわかってません。
+- ※ あとは、masresdefaultだけ16:9なので、縦横比によって生成される・されないはあるかも？
 
 そのため、なるべく大きいサムネを取得するためには、大きいサイズのURLから順に、画像が生成されているかどうかを確認していく必要があります。
 
