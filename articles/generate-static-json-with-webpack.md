@@ -16,9 +16,7 @@ APIのモックとしてJSONファイルが必要な際に、
 
 例えばこのようなJSファイルをimportしたときに
 
-__hoge.js__
-
-```js
+```js:hoge.js
 const json = {
   hoge: '1',
   huga: '2',
@@ -30,9 +28,7 @@ export default JSON.stringify(json, null, 2);
 
 このようなJSONファイルとして書き出されるように設定していきます。
 
-__hoge.json__
-
-```json
+```json:hoge.json
 {
   "hoge": "1",
   "huga": "2"
@@ -55,9 +51,7 @@ __hoge.json__
 
 webpack.config.jsの完成形はこのような形になります。
 
-__webpack.config.js__
-
-```js
+```js:webpack.config.js
 const path = require('path');
 
 module.exports = {
@@ -100,9 +94,7 @@ module.exports = {
 
 index.js側はこのようにします。
 
-__index.js__
-
-```js
+```js:index.js
 /**
  * 静的JSONとして書き出す
  */
