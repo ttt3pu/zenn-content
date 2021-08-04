@@ -1,5 +1,5 @@
 ---
-title: "webpackを使用して、JSファイルでreturnした値から静的JSONファイルを生成する"
+title: "【webpack】JSファイルでreturnした値から静的JSONファイルを生成する"
 emoji: "🔧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["javascript", "webpack", "json", "nodejs"]
@@ -10,7 +10,7 @@ published: true
 
 APIのモックとしてJSONファイルが必要な際に、  
 普通は[json-server](https://www.npmjs.com/package/json-server)とか便利なやつがいっぱいあるのでそれらを使えば良いと思うのですが、  
-訳あって静的ファイルとして必要なシチュエーションがあったため、webpackでJSから書き出せるように設定してみました。
+訳あって静的ファイルとして必要なシチュエーションがあったため、webpackを使ってJSファイルから書き出せるように構築してみました。
 
 （小さいJSONファイルなら普通に手打ちして作ったほうが早い場合もあるとは思うのですが、Math.randomとか反復処理とか使いたかったので）
 
