@@ -11,7 +11,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "zenn-cli": "^0.1.79"
+  "dependencies": {},
+  "devDependencies": {
+    "zenn-cli": "^0.1.93"
   }
 }
