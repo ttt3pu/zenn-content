@@ -14,8 +14,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "zenn-cli": "^0.1.93"
+    "zenn-cli": "^0.1.108"
+  },
+  "dependencies": {
+    "@types/markdown-it": "^12.2.3"
   }
 }
