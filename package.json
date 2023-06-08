@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "zenn-cli": "^0.1.108"
+    "zenn-cli": "^0.1.143"
   },
   "dependencies": {
     "@types/markdown-it": "^12.2.3"
