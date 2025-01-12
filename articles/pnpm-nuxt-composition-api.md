@@ -29,7 +29,15 @@ ERROR  Cannot find module '@vue/composition-api' from ...
 shamefully-hoist: true
 ```
 
-`shamefully-hoist` は、厳格で無い依存関係でlockファイルが作成されてしまっているような場合でも、巻き上げてimportをしてくれるようなオプションのようです。
-https://pnpm.io/npmrc#shamefully-hoist
+## `shamefully-hoist` とは？
 
-おそらく `@nuxtjs/composition-api` のバグ的なものだと思うので、一時的な対応方法ではありますが、いつかこの設定が無くても動くように修正されるかもしれません。
+`shamefully-hoist` は、厳格で無い依存関係でlockファイルが作成されてしまっているような場合でも、巻き上げてimportをしてくれるようなオプションです。
+<https://pnpm.io/npmrc#shamefully-hoist>
+
+デフォルトは `false` ですが、 `true` にすることで、以下のような状況のエラーを回避できるようになります。
+
+- ライブラリ内で使用されている依存パッケージがプロジェクトルートに存在しない
+- 孫以降の依存関係を直接 import しようとした際にエラーが発生する
+
+この問題の原因は、`@nuxtjs/composition-api` の内部のコードで、依存関係を適切に解決できない `import` 方法が使用されている可能性があるからと思われます。
+そのため、プロジェクト側で `shamefully-hoist` を設定し、依存関係の問題を回避してあげる必要があるようです。
