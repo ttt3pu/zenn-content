@@ -1,5 +1,5 @@
 ---
-title: "renovateのgroup機能でPR管理を効率化しよう"
+title: "Renovateのgroup機能でPR管理を効率化しよう"
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["renovate"]
@@ -7,13 +7,13 @@ published: false
 publication_name: arm_techblog
 ---
 
-弊社ではライブラリの更新管理に[renovate](https://www.mend.io/renovate/)を使用しています。  
+弊社ではライブラリの更新管理に[Renovate](https://www.mend.io/renovate/)を使用しています。  
 設定項目が豊富でカスタマイズし放題なため、チームの要件に合わせた柔軟な設定が可能で重宝しています。
 
-当記事ではrenovateの**グループ化機能**について紹介します。  
-これを活用することで、PRの管理を効率化することができます。
+当記事ではRenovateの**グループ化機能**について紹介します。  
+これを活用することで、Pull Request（以下PRと略します）の管理を効率化することができます。
 
-## renovateのグループ化機能とは
+## Renovateのグループ化機能とは
 
 グループ化機能は、複数のライブラリ更新を1つのPRにまとめる機能です。  
 これにより、PRの数を削減し、関連するライブラリを効率的に管理できます。
@@ -50,18 +50,18 @@ publication_name: arm_techblog
 
 | 項目名 | 役割 |
 |--------|------|
-| `description` | コメント。renovateの動作には影響なし |
+| `description` | コメント。Renovateの動作には影響なし |
 | `groupName` | グループの一意識別子。PRのタイトルとしても反映される |
 | `matchManagers` | パッケージマネージャーで絞り込みしたい場合は指定する |
 | `matchPackageNames` | グループ化したいライブラリ名の配列 |
 
-## 活用事例
+## グループ化機能のメリット
 
-実際の業務でrenovateを使用しているのですが、弊社では以下のような問題が発生していました。
+実際の業務でRenovateを使用しているのですが、弊社では以下のような問題が発生していました。
 
 ### 問題点: **PRの作成キューが滞留する**
 
-renovateが一度に作成できるPR数は、トークン制限などの都合により限られているため、  
+Renovateが一度に作成できるPR数は、トークン制限などの都合により限られているため、  
 使用しているライブラリやリポジトリ数が多い場合、大量にPR作成待ちが生まれてしまうという問題が起きます。
 
 単純な解決策としては、「定期的に[Dependency Dashboard](https://docs.renovatebot.com/key-concepts/dashboard/)を見に行き、手動でチェックを入れてPRを作成する」という方法がありますが、  
@@ -98,7 +98,7 @@ renovateが一度に作成できるPR数は、トークン制限などの都合�
 
 #### 例2. 開発・テストツール系をグループ化
 
-[eslint](https://eslint.org/)、 [prettier](https://prettier.io/) 、[vitest](https://vitest.dev/)などの、開発支援・テストツール系のライブラリをグループ化します。  
+[Eslint](https://eslint.org/)、 [Prettier](https://prettier.io/) 、[Vitest](https://vitest.dev/)などの、開発支援・テストツール系のライブラリをグループ化します。  
 これらのライブラリのテスト観点は、どれも「**CIが通っていればOK**」な類のため、1つにまとめることで効率化できます。
 
 ```json
@@ -115,7 +115,7 @@ renovateが一度に作成できるPR数は、トークン制限などの都合�
 
 ## まとめ
 
-renovateのグループ化機能を活用することで、PR管理の効率化に繋げることができます。
+Renovateのグループ化機能を活用することで、PR管理の効率化に繋げることができます。
 
 - **PR数の削減**による管理負荷の軽減
 - **関連ライブラリのグループ化**によるテスト効率の向上
