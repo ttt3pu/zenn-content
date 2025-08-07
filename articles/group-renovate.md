@@ -7,7 +7,7 @@ published: false
 publication_name: arm_techblog
 ---
 
-弊社ではライブラリの更新管理にrenovateを使用しています。  
+弊社ではライブラリの更新管理に[renovate](https://www.mend.io/renovate/)を使用しています。  
 設定項目が豊富でカスタマイズし放題なため、チームの要件に合わせた柔軟な設定が可能で重宝しています。
 
 当記事ではrenovateの**グループ化機能**について紹介します。  
