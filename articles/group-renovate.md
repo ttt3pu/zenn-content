@@ -3,7 +3,7 @@ title: "Renovateのgroup機能でPR管理を効率化しよう"
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["renovate"]
-published: false
+published: true
 publication_name: arm_techblog
 ---
 
