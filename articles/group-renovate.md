@@ -13,6 +13,8 @@ publication_name: arm_techblog
 当記事ではRenovateの**グループ化機能**について紹介します。  
 これを活用することで、Pull Request（以下PRと略します）の管理を効率化することができます。
 
+- [Renovate Documentation - Group](https://docs.renovatebot.com/configuration-options/#group)
+
 ## Renovateのグループ化機能とは
 
 グループ化機能は、複数のライブラリ更新を1つのPRにまとめる機能です。  
@@ -119,8 +121,3 @@ Renovateのグループ化機能を活用することで、PR管理の効率化�
 
 - **PR数の削減**による管理負荷の軽減
 - **関連ライブラリのグループ化**によるテスト効率の向上
-
-## 参考リンク
-
-- [Renovate Documentation - Grouping](https://docs.renovatebot.com/configuration-options/#group)
-- [Renovate Configuration Examples](https://docs.renovatebot.com/examples/)
