@@ -2,9 +2,9 @@
   "name": "zenn-content",
   "version": "1.0.0",
   "engines": {
-    "node": "22.20.0"
+    "node": "22.21.1"
   },
-  "packageManager": "pnpm@10.18.2",
+  "packageManager": "pnpm@10.25.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "zenn-cli": "0.2.3"
+    "zenn-cli": "0.2.10"
   },
   "dependencies": {
     "@types/markdown-it": "14.1.2"
