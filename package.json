@@ -4,7 +4,7 @@
   "engines": {
     "node": "24.15.0"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "zenn-cli": "0.4.7"
+    "zenn-cli": "0.4.8"
   },
   "dependencies": {
     "@types/markdown-it": "14.1.2"
