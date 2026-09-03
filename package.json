@@ -19,6 +19,6 @@
     "zenn-cli": "0.4.7"
   },
   "dependencies": {
-    "@types/markdown-it": "14.1.2"
+    "@types/markdown-it": "14.2.0"
   }
 }
