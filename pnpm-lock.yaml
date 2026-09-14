@@ -13,8 +13,8 @@ importers:
         version: 14.2.0
     devDependencies:
       zenn-cli:
-        specifier: 0.5.3
-        version: 0.5.3
+        specifier: 0.5.4
+        version: 0.5.4
 
 packages:
 
@@ -356,8 +356,8 @@ packages:
     resolution: {integrity: sha512-h3Fbisa2nKGPxCpm89Hk33lBLsnaGBvctQopaBSOW/uIs6FTe1ATyAnKFJrzVs9vpGdsTe73WF3V4lIsk4Gacw==}
     engines: {node: '>=18'}
 
-  zenn-cli@0.5.3:
-    resolution: {integrity: sha512-WcIf3PlZNnrR/NjGbEnwv3CQGpeLfuIFFKxT+U1BosHTvD3bCm7OxCRHd6UDl103ZTp8ZEpICcFdJzE5rGxT8A==}
+  zenn-cli@0.5.4:
+    resolution: {integrity: sha512-YqoGZa7xhJ0Wx9ZomPBuVeKhnbkb5HYHtnzEg0xP2L1U43hUMwi0xRWjO5+zIlq8yBlumkMo5WfhT5BStL3zAQ==}
     engines: {node: '>=22.12.0'}
     hasBin: true
 
@@ -715,7 +715,7 @@ snapshots:
     dependencies:
       is-wsl: 3.1.0
 
-  zenn-cli@0.5.3:
+  zenn-cli@0.5.4:
     dependencies:
       '@ai-sdk/fireworks': 3.0.48(zod@4.5.4)
       '@ai-sdk/openai': 4.0.63(zod@4.5.4)
