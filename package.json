@@ -2,7 +2,7 @@
   "name": "zenn-content",
   "version": "1.0.0",
   "engines": {
-    "node": "24.20.0"
+    "node": "24.21.0"
   },
   "packageManager": "pnpm@10.34.5",
   "description": "",
