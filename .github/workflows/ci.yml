@@ -22,4 +22,9 @@ jobs:
           node-version-file: package.json
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm test
+      - name: Check Zenn preview
+        run: |
+          pnpm preview --port 8000 > /tmp/zenn-preview.log 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          curl --fail --retry 15 --retry-connrefused --retry-delay 1 --max-time 5 http://localhost:8000/ || { cat /tmp/zenn-preview.log; exit 1; }

@@ -5,15 +5,6 @@
 
 ## Commoands
 
-### CIの検証を実行する
-
-```shell
-pnpm install --frozen-lockfile
-pnpm test
-```
-
-CIはすべてのPRとmainへのpushで実行します。`package.json`で指定したNode.js・pnpmを使い、Zennプレビューでテスト用記事の取得とMarkdownのHTML変換を確認します。
-
 ### 👇新しい記事を作成する
 
 ```shell

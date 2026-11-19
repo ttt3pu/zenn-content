@@ -8,7 +8,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --test",
     "article": "zenn new:article",
     "book": "zenn new:book",
     "preview": "zenn preview"
